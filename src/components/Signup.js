@@ -21,6 +21,10 @@ export default function Signup() {
             return setError('Passwords do not match')
         }
 
+        if (!passwordRef.current.value.match(/\d+/) || !passwordConfirmRef.current.value.match(/\d+/)) {
+            return setError('Passwords must include atleast 1 number');
+          }
+
         try {
             setError('')
             setLoading(true) //disable button before
