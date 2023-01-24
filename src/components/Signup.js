@@ -22,7 +22,7 @@ export default function Signup() {
         }
 
         if (!passwordRef.current.value.match(/\d+/) || !passwordConfirmRef.current.value.match(/\d+/)) {
-            return setError('Passwords should include at least 1 number');
+            return setError('Passwords must include at least 1 number');
           }
 
         try {
